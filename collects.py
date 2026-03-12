@@ -5,18 +5,8 @@ myID = uuid
 
 # ✅ URL源与简称
 sources = {
-    'https://api.uouin.com/cloudflare.html': 'Uouin',
-    'https://ip.164746.xyz': 'ZXW',
-    'https://ipdb.api.030101.xyz/?type=bestcf': 'IPDB',
-    'https://www.wetest.vip/page/cloudflare/address_v6.html': 'WeTestV6',
-    'https://ipdb.api.030101.xyz/?type=bestcfv6': 'IPDBv6',
-    'https://cf.090227.xyz/CloudFlareYes': 'CFYes',
-    'https://ip.haogege.xyz': 'HaoGG',
-    'https://vps789.com/openApi/cfIpApi': 'VPS',
-    'https://www.wetest.vip/page/cloudflare/address_v4.html': 'WeTest',
-    'https://addressesapi.090227.xyz/ct': 'CMLiuss',
-    'https://addressesapi.090227.xyz/cmcc-ipv6': 'CMLiussv6',
-    'https://raw.githubusercontent.com/xingpingcn/enhanced-FaaS-in-China/refs/heads/main/Cf.json': 'FaaS'
+    'https://jd.chatkg.qzz.io/ip.txt': 'Chatkg',
+    'https://jd.chatkg.qzz.io/ipv6.txt': 'Chatkgv6'
 }
 
 PORT = '443'  # 目标端口号
