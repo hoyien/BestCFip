@@ -86,9 +86,9 @@ with open('ipv4.txt', 'w') as f4:
 
 # 写入 ipv6.txt（仅IPv6）
 with open('ipv6.txt', 'w') as f6:
-    f6.write(f"ipv6.list.updated.at#Upd{timestamp}\n")
     for ip in sorted(ipv6_dict):
         f6.write(f"{ip}#{ipv6_dict[ip]}\n")
+    f6.write(f"ipv6.list.updated.at#Upd{timestamp}\n")
 
 print(f"✅ IPv4 写入 ipv4.txt，共 {len(ipv4_dict)} 个")
 print(f"✅ IPv6 写入 ipv6.txt，共 {len(ipv6_dict)} 个")
