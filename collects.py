@@ -80,9 +80,9 @@ for url, shortname in sources.items():
 
 # 写入 ipv4.txt（仅IPv4）
 with open('ipv4.txt', 'w') as f4:
-    f4.write(f"ipv4.list.updated.at#Upd{timestamp}\n")
     for ip in sorted(ipv4_dict):
         f4.write(f"{ip}#{ipv4_dict[ip]}\n")
+    f4.write(f"ipv4.list.updated.at#Upd{timestamp}\n")
 
 # 写入 ipv6.txt（仅IPv6）
 with open('ipv6.txt', 'w') as f6:
