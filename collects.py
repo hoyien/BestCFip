@@ -6,7 +6,7 @@ myID = uuid
 # ✅ URL源与简称
 sources = {
     'https://jd.chatkg.qzz.io/ip.txt': 'Chatkg',
-    'https://jd.chatkg.qzz.io/ipv6.txt': 'Chatkgv6'
+    'https://jd.chatkg.qzz.io/ip': 'Chatkgv6'
 }
 
 PORT = '443'  # 目标端口号
