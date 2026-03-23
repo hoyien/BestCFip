@@ -5,7 +5,7 @@
  */
 function operator(proxies, context) {
   // 1. 获取参数并进行合理化处理（去首尾空格）
-  const prefixName = context.arguments?.prefix?.trim();
+  const prefix = context.arguments?.prefix?.trim();
 
   // 2. 验证：只有当 prefixName 存在且长度大于 0 时才执行
   if (prefixName && prefixName.length > 0) {
