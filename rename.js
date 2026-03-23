@@ -1,5 +1,5 @@
 /**
- * Sub-Store 全球增强版 (支持参数化前缀)
+ * Sub-Store 全球增强版 (支持参数化前缀 + 扩展黑名单 + 扩展中国城市)
  * 参数说明: 在 Args 栏填入 PREFIX=你的前缀
  */
 
@@ -26,7 +26,7 @@ function operator(proxies, targetPlatform, { ARGUMENTS }) {
       { regex: /澳大利亚|澳洲|AU|Australia|Sydney/i, flag: "🇦🇺" },
       { regex: /印度|孟买|孟拜|IN|India|Mumbai|BOM/i, flag: "🇮🇳" },
       { regex: /瑞士|苏黎世|CH|Switzerland|Zurich/i, flag: "🇨🇭" },
-      // ... 扩充 A-Z (保持之前 160+ 逻辑)
+      // ... 扩充 A-Z
       { regex: /阿富汗|AF|Afghanistan/i, flag: "🇦🇫" },
       { regex: /阿尔巴尼亚|AL|Albania/i, flag: "🇦🇱" },
       { regex: /阿尔及利亚|DZ|Algeria/i, flag: "🇩🇿" },
@@ -72,18 +72,16 @@ function operator(proxies, targetPlatform, { ARGUMENTS }) {
       { regex: /乌克兰|UA|Ukraine/i, flag: "🇺🇦" },
       { regex: /委内瑞拉|VE|Venezuela/i, flag: "🇻🇪" },
       { regex: /越南|VN|Vietnam/i, flag: "🇻🇳" },
-      // 兜底
-      { regex: /中国|大陆|北京|上海|广州|深圳|苏州|南京|杭州|武汉|成都|CN|China/i, flag: "🇨🇳" }
+      // --- 更新后的中国节点匹配规则 ---
+      { regex: /中国|大陆|回国|国内|广东|江苏|浙江|北京|上海|广州|深圳|杭州|成都|重庆|武汉|西安|南京|天津|苏州|长沙|郑州|青岛|宁波|厦门|大连|沈阳|哈尔滨|徐州|济南|China|CN|Beijing|Shanghai|Guangzhou|Shenzhen|Hangzhou|Chengdu|Chongqing|Wuhan|Xian|Nanjing|Tianjin|Suzhou|Changsha|Zhengzhou|Qingdao|Ningbo|Xiamen|Dalian|Shenyang|Harbin|Xuzhou|Jinan/i, flag: "🇨🇳" }
     ],
-    BLACKLIST: ["官网", "流量", "到期", "重置", "网易云", "Music", "🎵", "客服"]
+    // --- 完整黑名单列表 ---
+    BLACKLIST: ["官网", "以下", "校园", "灾", "群", "禁止", "自定义", "邀请", "返利", "循环", "客服", "网站", "网址", "获取", "订阅", "流量", "总计", "到期", "机场", "下次", "重置", "重新", "设置", "版本", "官址", "过期", "已用", "联系", "邮箱", "工单", "贩卖", "通知", "倒卖", "防止", "地址", "频道", "无法", "说明", "提示", "特别", "访问", "支持", "教程", "关注", "更新", "作者", "加入", "超时", "收藏", "福利", "好友", "网易", "网易云", "网易云音乐", "音乐", "云音乐", "Netease", "Music", "𝐌𝐮𝐬𝐢𝐜", "Unbolck", "music", "🎵", "🎶", "🎧", "USE", "USED", "TOTAL", "EXPIRE", "EMAIL", "Panel", "Channel", "Author", "Traffic"]
   };
 
   // --- 2. 核心处理模块 ---
-
-  // A. 过滤黑名单
   const blacklistReg = new RegExp(CONFIG.BLACKLIST.join('|'), 'i');
   
-  // B. 旗帜匹配函数
   function getFlag(name) {
     for (const item of CONFIG.REGIONS) {
       if (item.regex.test(name)) return item.flag;
@@ -91,12 +89,11 @@ function operator(proxies, targetPlatform, { ARGUMENTS }) {
     return "🌐";
   }
 
-  // C. 名字清理函数
   function cleanName(name) {
     return name
-      .replace(/[\u{1F1E6}-\u{1F1FF}]{2}/gu, "") // 删旧旗帜
-      .replace(/🏴‍☠️/g, "") // 删海盗旗
-      .replace(/^[\s\-\|｜\[\]\(\)\._]+/, "") // 删开头杂符号
+      .replace(/[\u{1F1E6}-\u{1F1FF}]{2}/gu, "") 
+      .replace(/🏴‍☠️/g, "") 
+      .replace(/^[\s\-\|｜\[\]\(\)\._]+/, "") 
       .trim();
   }
 
