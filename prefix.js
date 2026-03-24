@@ -1,22 +1,24 @@
 /**
- * Sub-Store 节点添加前缀脚本
- * * @param {string} prefix - 传入的前缀参数
+ * 脚本：灵活添加前缀与分隔符
+ * 逻辑：
+ * 1. 优先检查节点名是否已经包含参数（原始机场名）。
+ * 2. 如果不包含，则添加 “参数 + | + 节点名”。
+ * 3. 分隔符仅在确认需要添加前缀时才构造。
  */
-function operator(proxies, targetPlatform, prefix) {
-  // 1. 合理化验证：不能为空、不能全是空格
-  if (!prefix || prefix.trim().length === 0) {
-    console.log("前缀参数无效，跳过操作");
-    return proxies;
-  }
 
-  const cleanPrefix = prefix.trim();
-  const separator = " | ";
+function operator(proxies) {
+  // 获取脚本参数（机场名）
+  const arg = typeof $arguments !== "undefined" ? $arguments : "";
 
-  return proxies.map(p => {
-    // 3. 避免重复添加：检查是否已以 "prefix |" 开头
-    // 4. 使用 " | " 分隔
-    if (p.name && !p.name.startsWith(cleanPrefix + separator)) {
-      p.name = `${cleanPrefix}${separator}${p.name}`;
+  // 如果参数为空，直接返回
+  if (!arg) return proxies;
+
+  return proxies.map((p) => {
+    // 1. 重复性验证：检查节点名是否已经以“参数”开头
+    // 这样即使原节点名是 "机场A-香港"，也不会再重复添加
+    if (!p.name.startsWith(arg)) {
+      // 2. 验证通过后，再构造带分隔符的标准格式
+      p.name = `${arg} | ${p.name}`;
     }
     return p;
   });
