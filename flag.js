@@ -5,10 +5,10 @@
 
 const CONFIG = {
   // 1. 前缀匹配正则：匹配常见的 “机场名 | ” 或 “机场名 - ” 等格式
-  // 匹配：开头非空字符 + 若干空格 + [|,-,:,_] + 若干空格
   prefixReg: /^(.+?)\s*[\||\-\:_]\s*/,
 
-  excludeReg: /官网|以下|校园|灾|群|禁止|自定义|邀请|返利|循环|客服|网站|网址|获取|订阅|流量|总计|到期|机场|下次|重置|重新|设置|版本|官址|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|地址|频道|无法|说明|提示|特别|访问|支持|教程|关注|更新|作者|加入|超时|收藏|福利|好友|网易|网易云|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic/i,
+  // 已去掉 USE 和 USED，并移除末尾的 i 标志，严格区分大小写
+  excludeReg: /官网|以下|校园|灾|群|禁止|自定义|邀请|返利|循环|客服|网站|网址|获取|订阅|流量|总计|到期|机场|下次|重置|重新|设置|版本|官址|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|地址|频道|无法|说明|提示|特别|访问|支持|教程|关注|更新|作者|加入|超时|收藏|福利|好友|网易|网易云|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic/,
 
   flagMap: {
     '香港|HK|Hong Kong|九龙|荃湾|沙田': '🇭🇰',
@@ -26,12 +26,13 @@ const CONFIG = {
     '泰国|TH|Thailand|曼谷|Bankkok': '🇹🇭'
   },
 
-  provincesReg: /河北|山西|辽宁|吉林|黑龙江|江苏|浙江|安徽|福建|江西|山东|河南|湖北|湖南|广东|海南|四川|贵州|云南|陕西|甘肃|青海|内蒙古|广西|西藏|宁夏|新疆|北京|天津|上海|重庆/i,
-  citiesReg: /广州|深圳|杭州|成都|武汉|南京|西安|苏州|郑州|长沙|福州|厦门|合肥|徐州|沈阳|大连|长春|哈尔滨|济南|青岛|无锡|宁波|昆明|南宁|石家庄|太原|南昌|贵阳|兰州|西宁|呼和浩特|乌鲁木齐|拉萨/i,
-  chinaCommonReg: /China|国内|回国/i,
-  taiwanReg: /台湾|TW|Taiwan|Tai Wan|台北|台中|高雄|新北|桃園|台南|Taipei|Taichung|Kaohsiung/i,
+  // 移除 i 标志，区分大小写
+  provincesReg: /河北|山西|辽宁|吉林|黑龙江|江苏|浙江|安徽|福建|江西|山东|河南|湖北|湖南|广东|海南|四川|贵州|云南|陕西|甘肃|青海|内蒙古|广西|西藏|宁夏|新疆|北京|天津|上海|重庆/,
+  citiesReg: /广州|深圳|杭州|成都|武汉|南京|西安|苏州|郑州|长沙|福州|厦门|合肥|徐州|沈阳|大连|长春|哈尔滨|济南|青岛|无锡|宁波|昆明|南宁|石家庄|太原|南昌|贵阳|兰州|西宁|呼和浩特|乌鲁木齐|拉萨/,
+  chinaCommonReg: /China|国内|回国/,
+  taiwanReg: /台湾|TW|Taiwan|Tai Wan|台北|台中|高雄|新北|桃園|台南|Taipei|Taichung|Kaohsiung/,
   flagEmojiReg: /([\uD83C][\uDDE6-\uDDFF][\uD83C][\uDDE6-\uDDFF])/,
-  speedReg: /([\d.]+)\s*(MB\/s|KB\/s|GB\/s)/i
+  speedReg: /([\d.]+)\s*(MB\/s|KB\/s|GB\/s)/
 };
 
 function operator(proxies) {
@@ -47,7 +48,7 @@ function operator(proxies) {
       const prefixMatch = p.name.match(CONFIG.prefixReg);
       
       if (prefixMatch) {
-        prefix = prefixMatch[0]; // 包含分隔符的部分，如 "红杏云 | "
+        prefix = prefixMatch[0]; 
         coreName = p.name.replace(prefix, "").trim();
       }
       
@@ -70,7 +71,8 @@ function operator(proxies) {
 
       // A. 匹配国家/城市补全旗帜
       for (const [key, flag] of Object.entries(CONFIG.flagMap)) {
-        if (new RegExp(key, 'i').test(name) && !CONFIG.flagEmojiReg.test(name)) {
+        // 此处 new RegExp 默认区分大小写
+        if (new RegExp(key).test(name) && !CONFIG.flagEmojiReg.test(name)) {
           name = flag + ' ' + name;
           break; 
         }
