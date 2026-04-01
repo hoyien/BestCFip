@@ -1,5 +1,8 @@
 /**
  * Sub-Store 节点处理脚本
+ * 使用方式：在订阅链接后添加 #model=all
+ * 可选: all (全部), china (仅国内), proxy (仅国外)
+ * 示例：https://example.com/sub#model=all
  * * 功能：
  * 1. 自动剔除广告、流量、官网等无效节点
  * 2. 深度识别澳门各堂区及常用国家/地区
