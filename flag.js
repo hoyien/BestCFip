@@ -11,8 +11,9 @@
  */
 
 async function operator(proxies) {
-  // --- 1. 配置参数 ---
-  const model = "all"; // 可选: all (全部), china (仅国内), proxy (仅国外)
+  // 可选: all (全部), china (仅国内), proxy (仅国外)
+  // 优先获取链接后的参数 (例如 #model=china)，若无参数则默认为 "all"
+  const model = (typeof $arguments !== "undefined" && $arguments.model) ? $arguments.model.toLowerCase() : "all";
 
   // 边界保护正则：防止误伤包含在单词中间的字符
   const b = {
