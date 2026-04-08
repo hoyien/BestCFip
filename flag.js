@@ -8,6 +8,7 @@
  * 2. 深度识别澳门各堂区及常用国家/地区
  * 3. 统一旗帜 Emoji 格式
  * 4. 针对带速率标识的节点进行局部降序排列
+ * 5. 针对“优选”开头的节点统一替换为美国旗帜 🇺🇸
  */
 
 async function operator(proxies) {
@@ -22,10 +23,9 @@ async function operator(proxies) {
   };
 
   // --- 2. 黑名单正则 ---
-  // 过滤掉机场的提示信息、流量统计和社交链接
   const blacklist = /总计|已用|剩余|流量|套餐|到期|过期|有效|下次|重置|重新|版本|邮箱|工单|地址|网址|官方|官址|官网|网站|备用|订阅|获取|客服|联系|加入|关注|频道|群|好友|作者|通知|禁止|倒卖|贩卖|防止|循环|返利|邀请|自定义|校园|无法|超时|失联|提示|说明|特别|访问|支持|教程|设置|更新|收藏|福利|以下|测试|学术|机场|灾|\\b(APP|TOTAL|USED|USE|TRAFFIC|EXPIRE|EMAIL|PANEL|CHANNEL|AUTHOR|TEST)\\b/i;
 
-  // --- 3. 地区映射库 (包含澳门深度增强) ---
+  // --- 3. 地区映射库 ---
   const countryMap = {
     "🇭🇰": new RegExp(`香港|九龙|铜锣湾|旺角|中环|沙田|荃湾|将军澳|离岛|葵涌|观塘|柴湾|${b.l}(HongKong|HK|Kowloon|Causeway\\s?Bay|Mong\\s?Kok|Central|Sha\\s?Tin|Tsuen\\s?Wan|Tseung\\s?Kwan\\s?O|Kwai\\s?Chung|Kwun\\s?Tong|Chai\\s?Wan)${b.r}`, "gi"),
     "🇲🇴": new RegExp(`澳门|氹仔|路环|路氹|花地玛|圣安多尼|大堂区|望德堂|风顺堂|${b.l}(Macao|Macau|Taipa|Coloane|Cotai|Fatima|Anthony|Lazarus|Lawrence|MO)${b.r}`, "gi"),
@@ -45,17 +45,21 @@ async function operator(proxies) {
   let list = proxies.filter(p => !blacklist.test(p.name));
 
   list = list.filter(p => {
-    // 获取原始旗帜并移除可能的台湾/中国/海盗旗干扰
     const originalFlag = ProxyUtils.getFlag(p.name).replace(/🇹🇼|🇼🇸|🇨🇳|🏴‍☠️/g, '');
     let cleanName = ProxyUtils.removeFlag(p.name).trim();
     
     let matchedEmoji = "";
 
-    // 遍历正则匹配
-    for (const [emoji, regex] of Object.entries(countryMap)) {
-      if (new RegExp(regex.source, "gi").test(cleanName)) {
-        matchedEmoji = emoji;
-        break;
+    // 新增：判断是否以“优选”开头，如果是，直接赋美国国旗
+    if (cleanName.startsWith("优选")) {
+      matchedEmoji = "🇺🇸";
+    } else {
+      // 遍历正则匹配
+      for (const [emoji, regex] of Object.entries(countryMap)) {
+        if (new RegExp(regex.source, "gi").test(cleanName)) {
+          matchedEmoji = emoji;
+          break;
+        }
       }
     }
 
@@ -69,8 +73,8 @@ async function operator(proxies) {
     if (model === "china" && !isChina) return false;
     if (model === "proxy" && isChina) return false;
 
-    // 旗帜规范化（萨摩亚旗代指台湾，可根据喜好修改）
-    const finalFlag = matchedEmoji.replace(/🏴‍☠️/g, '').replace(/🇹🇼/g, '🇼🇸');
+    // 旗帜规范化
+    const finalFlag = (matchedEmoji || '').replace(/🏴‍☠️/g, '').replace(/🇹🇼/g, '🇼🇸');
 
     // 重新组合名称
     p.name = `${finalFlag} ${cleanName}`.trim();
