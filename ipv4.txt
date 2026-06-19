@@ -1,76 +1,239 @@
-ipv4-list-updated-at#Upd20260620_01:55
-104.16.105.166:443#US-128979
-104.16.65.1:443#US-3fe957
-104.17.105.118:443#US-b067d3
-104.17.132.218:443#US-d4f929
-104.17.139.37:443#US-46e929
-104.17.142.212:443#US-215fd7
-104.17.145.69:443#US-85bee8
-104.17.148.43:443#US-742dd8
-104.17.150.253:443#US-5884f5
-104.17.162.3:443#US-c03da2
-104.17.167.134:443#US-9d1e03
-104.17.184.76:443#US-473e62
-104.17.223.68:443#US-c571110
-104.17.230.211:443#US-d686e3
-104.17.242.144:443#US-852e58
-104.17.248.134:443#US-0ddd04
-104.17.253.88:443#US-a81ce6
-104.17.69.244:443#US-9386e3
-104.18.10.226:443#US-288df8
-104.18.151.172:443#US-46a3c4
-104.18.166.129:443#US-1740a8
-104.18.189.153:443#US-1521d5
-104.18.223.253:443#US-abcd95
-104.18.255.167:443#US-0c04d10
-104.18.34.168:443#US-c44fc6
-104.18.7.227:443#US-6ee584
-104.18.81.19:443#US-c49985
-104.18.89.52:443#US-1b92e1
-104.19.148.121:443#US-918d62
-104.19.154.200:443#US-3f45310
-104.19.159.88:443#US-2c7275
-104.19.212.207:443#US-316562
-104.19.220.22:443#US-a16b31
-104.20.52.176:443#US-84c9710
-104.20.57.158:443#US-b714610
-104.20.58.110:443#US-c471e10
-104.21.25.74:443#US-1b92a4
-104.26.3.162:443#US-075eb2
-104.26.4.90:443#US-b90486
-104.26.5.134:443#US-6d09710
-104.26.8.117:443#US-6f1cf1
-104.31.16.158:443#US-09e679
-108.162.198.112:443#US-b9c6c2
-162.159.0.203:443#US-cec2a3
-162.159.128.253:443#US-ab95a2
-162.159.136.89:443#US-bcf345
-162.159.137.204:443#US-5126a8
-162.159.140.116:443#US-7dd408
-162.159.140.85:443#US-db6b99
-162.159.24.131:443#US-9467e10
-162.159.27.214:443#US-41fcf9
-162.159.38.174:443#US-9b4566
-162.159.39.221:443#US-c2b7a9
-162.159.41.180:443#US-3cdc16
-162.159.44.43:443#US-65cf39
-162.159.45.5:443#US-9727d1
-162.159.58.65:443#US-bdd416
-162.159.61.183:443#US-9dddb3
-162.159.62.43:443#US-cea5f0
-172.64.229.7:443#US-ac9af1
-172.64.41.201:443#US-072764
-172.64.48.226:443#US-7f3076
-172.64.52.127:443#US-2334a0
-172.64.52.131:443#US-e8eb56
-172.64.53.147:443#US-31e856
-172.64.82.114:443#US-a5a016
-172.64.91.69:443#US-a83720
-173.245.49.194:443#US-74d083
-173.245.58.115:443#US-ede7a0
-173.245.58.48:443#US-fdd6d8
-198.41.194.162:443#US-be77b5
-198.41.208.15:443#US-2cdff8
-198.41.208.224:443#US-974f60
-198.41.223.190:443#US-1b8763
-198.41.223.235:443#US-ddd518
+ipv4-list-updated-at#Upd20260620_05:09
+104.16.159.144:443#{
+  "status": 429,
+  "error": {
+    "title": "Rate limit hit",
+    "message": "Sign up at ipinfo.io"
+  }
+}-3f43c10
+104.16.243.134:443#{
+  "status": 429,
+  "error": {
+    "title": "Rate limit hit",
+    "message": "Sign up at ipinfo.io"
+  }
+}-ebf0510
+104.17.132.189:443#{
+  "status": 429,
+  "error": {
+    "title": "Rate limit hit",
+    "message": "Sign up at ipinfo.io"
+  }
+}-c7bc98
+104.17.137.167:443#{
+  "status": 429,
+  "error": {
+    "title": "Rate limit hit",
+    "message": "Sign up at ipinfo.io"
+  }
+}-6a6a04
+104.17.137.208:443#{
+  "status": 429,
+  "error": {
+    "title": "Rate limit hit",
+    "message": "Sign up at ipinfo.io"
+  }
+}-a596c2
+104.17.144.225:443#{
+  "status": 429,
+  "error": {
+    "title": "Rate limit hit",
+    "message": "Sign up at ipinfo.io"
+  }
+}-2a7a75
+104.17.147.125:443#{
+  "status": 429,
+  "error": {
+    "title": "Rate limit hit",
+    "message": "Sign up at ipinfo.io"
+  }
+}-f5f2b5
+104.17.151.41:443#{
+  "status": 429,
+  "error": {
+    "title": "Rate limit hit",
+    "message": "Sign up at ipinfo.io"
+  }
+}-75c656
+104.17.153.2:443#{
+  "status": 429,
+  "error": {
+    "title": "Rate limit hit",
+    "message": "Sign up at ipinfo.io"
+  }
+}-ee1fc1
+104.17.162.144:443#{
+  "status": 429,
+  "error": {
+    "title": "Rate limit hit",
+    "message": "Sign up at ipinfo.io"
+  }
+}-222867
+104.17.170.239:443#{
+  "status": 429,
+  "error": {
+    "title": "Rate limit hit",
+    "message": "Sign up at ipinfo.io"
+  }
+}-a07bb7
+104.17.19.204:443#{
+  "status": 429,
+  "error": {
+    "title": "Rate limit hit",
+    "message": "Sign up at ipinfo.io"
+  }
+}-32fb73
+104.17.219.14:443#{
+  "status": 429,
+  "error": {
+    "title": "Rate limit hit",
+    "message": "Sign up at ipinfo.io"
+  }
+}-91c219
+104.18.39.193:443#{
+  "status": 429,
+  "error": {
+    "title": "Rate limit hit",
+    "message": "Sign up at ipinfo.io"
+  }
+}-2d65b7
+104.18.82.178:443#{
+  "status": 429,
+  "error": {
+    "title": "Rate limit hit",
+    "message": "Sign up at ipinfo.io"
+  }
+}-eece61
+104.18.90.226:443#{
+  "status": 429,
+  "error": {
+    "title": "Rate limit hit",
+    "message": "Sign up at ipinfo.io"
+  }
+}-0bc999
+104.18.92.221:443#{
+  "status": 429,
+  "error": {
+    "title": "Rate limit hit",
+    "message": "Sign up at ipinfo.io"
+  }
+}-219fe7
+104.19.146.204:443#{
+  "status": 429,
+  "error": {
+    "title": "Rate limit hit",
+    "message": "Sign up at ipinfo.io"
+  }
+}-5643e2
+104.19.153.181:443#{
+  "status": 429,
+  "error": {
+    "title": "Rate limit hit",
+    "message": "Sign up at ipinfo.io"
+  }
+}-a96c40
+104.19.153.53:443#{
+  "status": 429,
+  "error": {
+    "title": "Rate limit hit",
+    "message": "Sign up at ipinfo.io"
+  }
+}-bec869
+108.162.196.103:443#{
+  "status": 429,
+  "error": {
+    "title": "Rate limit hit",
+    "message": "Sign up at ipinfo.io"
+  }
+}-7876a7
+108.162.198.23:443#{
+  "status": 429,
+  "error": {
+    "title": "Rate limit hit",
+    "message": "Sign up at ipinfo.io"
+  }
+}-da4d69
+162.159.11.96:443#{
+  "status": 429,
+  "error": {
+    "title": "Rate limit hit",
+    "message": "Sign up at ipinfo.io"
+  }
+}-7c1f78
+162.159.14.10:443#{
+  "status": 429,
+  "error": {
+    "title": "Rate limit hit",
+    "message": "Sign up at ipinfo.io"
+  }
+}-3f7d28
+162.159.2.95:443#{
+  "status": 429,
+  "error": {
+    "title": "Rate limit hit",
+    "message": "Sign up at ipinfo.io"
+  }
+}-19a4010
+162.159.38.9:443#{
+  "status": 429,
+  "error": {
+    "title": "Rate limit hit",
+    "message": "Sign up at ipinfo.io"
+  }
+}-8f0425
+162.159.39.206:443#{
+  "status": 429,
+  "error": {
+    "title": "Rate limit hit",
+    "message": "Sign up at ipinfo.io"
+  }
+}-c1a1c6
+162.159.44.9:443#{
+  "status": 429,
+  "error": {
+    "title": "Rate limit hit",
+    "message": "Sign up at ipinfo.io"
+  }
+}-99d7e6
+162.159.45.5:443#{
+  "status": 429,
+  "error": {
+    "title": "Rate limit hit",
+    "message": "Sign up at ipinfo.io"
+  }
+}-ecd5b9
+162.159.8.147:443#{
+  "status": 429,
+  "error": {
+    "title": "Rate limit hit",
+    "message": "Sign up at ipinfo.io"
+  }
+}-e77446
+172.64.229.52:443#{
+  "status": 429,
+  "error": {
+    "title": "Rate limit hit",
+    "message": "Sign up at ipinfo.io"
+  }
+}-879520
+172.64.52.151:443#{
+  "status": 429,
+  "error": {
+    "title": "Rate limit hit",
+    "message": "Sign up at ipinfo.io"
+  }
+}-7e1c20
+172.64.53.33:443#{
+  "status": 429,
+  "error": {
+    "title": "Rate limit hit",
+    "message": "Sign up at ipinfo.io"
+  }
+}-742196
+198.41.209.215:443#{
+  "status": 429,
+  "error": {
+    "title": "Rate limit hit",
+    "message": "Sign up at ipinfo.io"
+  }
+}-a7e2a5
