@@ -1,1 +1,25 @@
-dm1lc3M6Ly9leUoySWpvaU1pSXNJbkJ6SWpvaVhIVTRZbVkzWEhVMU56STRYSFU1TnpWbFZsQk9YSFUzWmpVeFhIVTNaV1JqWEhVM00yRm1YSFUxT0RnelhIVTBaVEJpWEhVMk5tWTBYSFUyTldJd1hIVTRZbUV5WEhVNU5qQTFJaXdpWVdSa0lqb2lNVEkzTGpBdU1DNHhJaXdpY0c5eWRDSTZJalV6SWl3aWFXUWlPaUl3TURBd01EQXdNQzB3TURBd0xUQXdNREF0TURBd01DMHdNREF3TURBd01EQXdNREFpTENKaGFXUWlPaUl3SWl3aWJtVjBJam9pZDNNaUxDSjBlWEJsSWpvaWJtOXVaU0lzSW1odmMzUWlPaUowYlhNdVpHbHVaM1JoYkdzdVkyOXRJaXdpY0dGMGFDSTZJbHd2SWl3aWRHeHpJam9pSW4wPQ0K
+最新官网: inoui.cc/db=vmess,127.0.0.1,53,auto,7f38149f-0ebc-0d3a-f9cc-3b8df9dcc2be,fast-open=false,udp=true,alterId=0,transport=ws,path=/,host=tms.dingtalk.com
+禁止回国=vmess,127.0.0.1,53,auto,7f38149f-0ebc-0d3a-f9cc-3b8df9dcc2be,fast-open=false,udp=true,alterId=0,transport=ws,path=/,host=tms.dingtalk.com
+-----以下为国内区-----=vmess,127.0.0.1,53,auto,7f38149f-0ebc-0d3a-f9cc-3b8df9dcc2be,fast-open=false,udp=true,alterId=0,transport=ws,path=/,host=tms.dingtalk.com
+广州移动 01 | ws=vmess,120.240.141.9,4430,auto,7f38149f-0ebc-0d3a-f9cc-3b8df9dcc2be,fast-open=false,udp=true,alterId=0,transport=ws,path=/,host=tms.dingtalk.com
+广州移动 02 | tcp=vmess,120.240.141.10,4430,auto,7f38149f-0ebc-0d3a-f9cc-3b8df9dcc2be,fast-open=false,udp=true,alterId=0,transport=http,path=/,host=tms.dingtalk.com
+广州移动 03 | ws | ipv6=vmess,2409:8c54:6810:21::8964,4430,auto,7f38149f-0ebc-0d3a-f9cc-3b8df9dcc2be,fast-open=false,udp=true,alterId=0,transport=ws,path=/,host=tms.dingtalk.com
+广州移动 04 | tcp | ipv6=vmess,2409:8c54:6810:22::8964,4430,auto,7f38149f-0ebc-0d3a-f9cc-3b8df9dcc2be,fast-open=false,udp=true,alterId=0,transport=http,path=/,host=tms.dingtalk.com
+-----以下为国际区-----=vmess,127.0.0.1,53,auto,7f38149f-0ebc-0d3a-f9cc-3b8df9dcc2be,fast-open=false,udp=true,alterId=0,transport=http,path=/,host=tms.dingtalk.com
+香港 01=vmess,120.240.142.21,12374,auto,7f38149f-0ebc-0d3a-f9cc-3b8df9dcc2be,fast-open=false,udp=true,alterId=0,transport=ws,path=/e6033871-152c-aee9-b059-a33eed99914d,host=tms.dingtalk.com
+香港 02=vmess,120.240.142.21,12374,auto,7f38149f-0ebc-0d3a-f9cc-3b8df9dcc2be,fast-open=false,udp=true,alterId=0,transport=ws,path=/1b0b075f-e8cc-1741-25f7-51689f4f34e6,host=tms.dingtalk.com
+香港 03=vmess,120.240.142.21,12374,auto,7f38149f-0ebc-0d3a-f9cc-3b8df9dcc2be,fast-open=false,udp=true,alterId=0,transport=ws,path=/8b8b8554-20c0-fa96-9d2d-2c420abf2faa,host=tms.dingtalk.com
+台湾 01=vmess,120.240.142.21,12374,auto,7f38149f-0ebc-0d3a-f9cc-3b8df9dcc2be,fast-open=false,udp=true,alterId=0,transport=ws,path=/ae36e201-a82a-65a0-1e6c-fcf316773b16,host=tms.dingtalk.com
+台湾 02=vmess,120.240.142.21,12374,auto,7f38149f-0ebc-0d3a-f9cc-3b8df9dcc2be,fast-open=false,udp=true,alterId=0,transport=ws,path=/adb4c2cc-9e77-d6fc-4dba-e06b15659469,host=tms.dingtalk.com
+新加坡 01=vmess,120.240.142.21,12374,auto,7f38149f-0ebc-0d3a-f9cc-3b8df9dcc2be,fast-open=false,udp=true,alterId=0,transport=ws,path=/c66a1180-f704-e966-08fd-c1d41218fb3d,host=tms.dingtalk.com
+新加坡 02=vmess,120.240.142.21,12374,auto,7f38149f-0ebc-0d3a-f9cc-3b8df9dcc2be,fast-open=false,udp=true,alterId=0,transport=ws,path=/c4fd0a9f-486f-d9eb-12e3-0b86021ccba1,host=tms.dingtalk.com
+日本 01=vmess,120.240.142.21,12374,auto,7f38149f-0ebc-0d3a-f9cc-3b8df9dcc2be,fast-open=false,udp=true,alterId=0,transport=ws,path=/d51a803c-794b-0993-7317-086a6990aa3b,host=tms.dingtalk.com
+日本 02=vmess,120.240.142.21,12374,auto,7f38149f-0ebc-0d3a-f9cc-3b8df9dcc2be,fast-open=false,udp=true,alterId=0,transport=ws,path=/8adff421-9461-c795-7fb6-226142b8e194,host=tms.dingtalk.com
+韩国 01=vmess,120.240.142.21,12374,auto,7f38149f-0ebc-0d3a-f9cc-3b8df9dcc2be,fast-open=false,udp=true,alterId=0,transport=ws,path=/9a688145-d2b2-f20d-d774-3062666381c9,host=tms.dingtalk.com
+泰国 01=vmess,120.240.142.21,12374,auto,7f38149f-0ebc-0d3a-f9cc-3b8df9dcc2be,fast-open=false,udp=true,alterId=0,transport=ws,path=/2e9e0288-9f95-4861-461f-e662e6cbe6c9,host=tms.dingtalk.com
+美国 01=vmess,120.240.142.21,12374,auto,7f38149f-0ebc-0d3a-f9cc-3b8df9dcc2be,fast-open=false,udp=true,alterId=0,transport=ws,path=/037bcb02-13a3-434b-483d-bcfe20daba07,host=tms.dingtalk.com
+美国 02=vmess,120.240.142.21,12374,auto,7f38149f-0ebc-0d3a-f9cc-3b8df9dcc2be,fast-open=false,udp=true,alterId=0,transport=ws,path=/06a72651-29e6-85ce-e8dd-d096037f16b0,host=tms.dingtalk.com
+美国 03=vmess,120.240.142.21,12374,auto,7f38149f-0ebc-0d3a-f9cc-3b8df9dcc2be,fast-open=false,udp=true,alterId=0,transport=ws,path=/34ec32f8-5ba7-e22c-731b-932254181c08,host=tms.dingtalk.com
+美国 04=vmess,120.240.142.21,12374,auto,7f38149f-0ebc-0d3a-f9cc-3b8df9dcc2be,fast-open=false,udp=true,alterId=0,transport=ws,path=/fc26cd0e-0c72-83f5-495e-124282f75e53,host=tms.dingtalk.com
+加拿大 01=vmess,120.240.142.21,12374,auto,7f38149f-0ebc-0d3a-f9cc-3b8df9dcc2be,fast-open=false,udp=true,alterId=0,transport=ws,path=/83880a52-5732-7ecb-4d86-a7dfbde8cd73,host=tms.dingtalk.com
+英国 01=vmess,120.240.142.21,12374,auto,7f38149f-0ebc-0d3a-f9cc-3b8df9dcc2be,fast-open=false,udp=true,alterId=0,transport=ws,path=/9e99a0fc-f3f2-6cb3-c90b-409b98bd848d,host=tms.dingtalk.com
